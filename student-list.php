@@ -1,6 +1,8 @@
 <?php
 include 'layout/header.php';
 include "./database/env.php";
+$query = "SELECT * FROM student_management_sys ORDER BY id DESC";
+$result = mysqli_query($database, $query);
 ?>
 
   <div class="container mt-5">
