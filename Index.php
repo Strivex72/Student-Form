@@ -82,18 +82,26 @@ include "./layout/header.php";
     <div class="form-container">
         <h2 class="section-title">Student Information</h2>
         
-        <form action="./controller/store.php" method="POST">
-            <div class="row">
-                <div class="col-md-6" style="margin-bottom: 20px;">
-                    <label class="form-label">Full Name</label>
-                    <input type="text" class="form-control" name="name" placeholder="e.g. Sadman Chy" required>
-                </div>
+       <form action="./controller/store.php" method="POST">
+    <div class="row">
+        <div class="col-md-6" style="margin-bottom: 20px;">
+            <label class="form-label">Full Name</label>
+            <input type="text" class="form-control" name="name" placeholder="e.g. Sadman Chy">
+            <span class="text-danger" style="font-size: 12px;">
+                <?= $_SESSION['errors']['name_error'] ?? '' ?>
+            </span>
+        </div>
 
-                <div class="col-md-6" style="margin-bottom: 20px;">
-                    <label class="form-label">Phone Number</label>
-                    <input type="tel" class="form-control" name="number" placeholder="+88017XXXXXXXX" required>
-                </div>
+        <div class="col-md-6" style="margin-bottom: 20px;">
+            <label class="form-label">Phone Number</label>
+            <input type="tel" class="form-control" name="number" placeholder="+88017XXXXXXXX">
+            <span class="text-danger" style="font-size: 12px;">
+                <?= $_SESSION['errors']['num_error'] ?? '' ?>
+            </span>
+        </div>
 
+        </div>
+</form>
                 <div class="col-md-12" style="margin-bottom: 20px;">
                     <label class="form-label">Student Address</label>
                     <input type="text" class="form-control" name="address" placeholder="House No: , Road: , Area:." required>
