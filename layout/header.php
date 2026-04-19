@@ -22,10 +22,10 @@ session_start();
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav m-auto">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="index.php">Main page</a>
+          <a class="nav-link active" aria-current="page" href="index.php">Add Students</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="student-list.php">Student list</a>
+          <a class="nav-link" href="student-list.php">Student view list</a>
         </li>
       </ul>
     </div>
